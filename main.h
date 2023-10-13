@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 char *_strncat(char *dest, const char *src);
-void _putchar(char c);
+int _putchar(char c);
+int _printstring(char *str);
 
 #endif
