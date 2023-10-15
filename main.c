@@ -10,13 +10,13 @@
 int main(int argc, char **env)
 {
 (void)argc;
-char *prompt = "(Shell)$ ";
+char *prompt ="(Shell)$ ";
 char *buffer = NULL;
-char *argv[20];
+char *argv[20], *delim = "\n";
 size_t bufersize = 0;
 ssize_t numb_ch;
 pid_t child_id;
-int i, stutus;
+int i, j, stutus;
 while (1)
 {
 if (isatty(0))
@@ -34,7 +34,12 @@ if (buffer[i] == '\n')
 buffer[i] = 0;
 i++;
 }
-argv[0] = _strdup(buffer);
+j = 0;
+argv[j] = strtok(buffer, delim);
+while (argv[j])
+{
+argv[++j] = strtok(NULL, delim);
+}
 child_id = fork();
 if (child_id < 0)
 {
@@ -49,7 +54,6 @@ _printstring("command doesn't exit ..\n");
 }
 else
 wait(&stutus);
-_printstring(buffer);
 }
 
 free(buffer);
