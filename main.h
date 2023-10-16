@@ -8,10 +8,14 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+
+
 char *_strncat(char *dest, const char *src);
 int _putchar(char c);
 int _printstring(char *str);
 char *_strdup(const char *str);
+char *location(char *path, char *args);
+char *gets_loc(char *arg);
 
 
 #endif

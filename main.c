@@ -11,8 +11,8 @@ int main(int argc, char **env)
 {
 (void)argc;
 char *prompt ="(Shell)$ ";
-char *buffer = NULL;
-char *argv[20], *delim = "\n";
+char *buffer = NULL, *path;
+char *argv[20], *delim = " \n";
 size_t bufersize = 0;
 ssize_t numb_ch;
 pid_t child_id;
@@ -40,6 +40,13 @@ while (argv[j])
 {
 argv[++j] = strtok(NULL, delim);
 }
+argv[j] = NULL;
+path = gets_loc(argv[0]);
+if (path == NULL)
+{
+_printstring("command not found \n");
+continue;
+}
 child_id = fork();
 if (child_id < 0)
 {
@@ -49,7 +56,7 @@ exit (0);
 }
 else if (child_id == 0)
 {
-if (execve(argv[0], argv, env) == -1)
+if (execve(path, argv, env) == -1)
 _printstring("command doesn't exit ..\n");
 }
 else
