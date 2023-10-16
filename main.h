@@ -8,10 +8,13 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+
 char *_strncat(char *dest, const char *src);
 int _putchar(char c);
 int _printstring(char *str);
 char *_strdup(const char *str);
-
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *getEnv(const char *variable);
 
 #endif
