@@ -9,7 +9,7 @@
 char *location(char *path, char *args)
 {
 char *path_copy, *path_token, *filepath;
-char *delim = ":", *buffr;
+char *delim = ":";
 path_copy = _strdup(path);
 path_token = strtok(path_copy, delim);
 filepath = malloc(strlen(args) +strlen(path_token ) + 2);

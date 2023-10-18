@@ -8,14 +8,14 @@
  */
 int main(int argc, char **env)
 {
-(void)argc;
-char *prompt ="(Shell)$ ";
+char *prompt ="(Shell)$ ",  *delim = " \n";
 char *buffer = NULL, *path;
-char *argv[20], *delim = " \n";
+char *argv[20];
 size_t bufersize = 0;
 ssize_t numb_ch;
 pid_t child_id;
 int i, j, stutus;
+(void)argc;
 while (1)
 {
 if (isatty(0))
