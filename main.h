@@ -8,6 +8,8 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <fcntl.h>
+#include <dirent.h>
 
 
 char *_strncat(char *dest, const char *src);
@@ -20,4 +22,5 @@ char *gets_loc(char *arg);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *getEnv(const char *variable);
+
 #endif
