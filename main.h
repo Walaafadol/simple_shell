@@ -14,11 +14,6 @@
 #include <stddef.h>
 #include <fcntl.h>
 #include <dirent.h>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6701ad26a022e7d07b2781d3b561cfe9794240d1
-
 #define DELIM " \t\n"
 extern char **environ;
 char *read_line(void);
@@ -45,10 +40,5 @@ char *_itoa(int s);
 void reverse_st(char *str, int len);
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 6701ad26a022e7d07b2781d3b561cfe9794240d1
 #endif
