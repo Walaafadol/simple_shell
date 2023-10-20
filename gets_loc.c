@@ -26,7 +26,6 @@ return (filepath);
 path_token = strtok(NULL, delim);
 }
 free(filepath);
-free(path_copy);
 return (NULL);
 }
 /**
