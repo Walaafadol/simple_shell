@@ -14,6 +14,10 @@
 #include <stddef.h>
 #include <fcntl.h>
 #include <dirent.h>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6701ad26a022e7d07b2781d3b561cfe9794240d1
 
 #define DELIM " \t\n"
 extern char **environ;
@@ -27,7 +31,7 @@ char *location(char *path, char *args);
 char *gets_loc(char *arg);
 int _execute(char **command, char **arg, int idx);
 char *_getspath(char *command);
-
+int _atoi(char *s);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *getEnv(const char *variable);
@@ -41,7 +45,10 @@ char *_itoa(int s);
 void reverse_st(char *str, int len);
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 6701ad26a022e7d07b2781d3b561cfe9794240d1
 #endif
