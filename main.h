@@ -38,7 +38,9 @@ char *_getsenv(char *var);
 void printerror(char *name, char *cmd, int dx);
 char *_itoa(int s);
 void reverse_st(char *str, int len);
-
-
-
+int ispositive(char *str);
+int isbuilt(char *command);
+void handle_built(char **command, char **argv, int *status, int idx);
+void exit_shell(char **command, char **argv, int *status, int idx);
+void printenv(char **command, int *status);
 #endif

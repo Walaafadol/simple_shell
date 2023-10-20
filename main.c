@@ -25,6 +25,9 @@ idx++;
 command = tokenizr(line);
 if (!command)
 continue;
+if (isbuilt(command[0]))
+handle_built(command, argv, &stutus, idx);
+else
 stutus = _execute(command, argv, idx);
 }
 }

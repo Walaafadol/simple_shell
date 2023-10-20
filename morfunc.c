@@ -45,4 +45,21 @@ start++;
 end--;
 }
 }
-
+/**
+ * ispositive - the main program of simple shell
+ * Description: to run a simple shell program
+ * @str: argument count
+ * Return: void
+ */
+int ispositive(char *str)
+{
+int i;
+if (!str)
+return (0);
+for (i = 0; str[i]; i++)
+{
+if (str[i] < '0' || str[i] > '9')
+return (0);
+}
+return (1);
+}
